@@ -1,0 +1,57 @@
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+.container {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin: 0 auto;
+
+  @include respond-to('mobile') {
+    width: 100%;
+  }
+  @include respond-to('tablet') {
+    width: 72rem;
+  }
+  @include respond-to('desktop') {
+    width: 96rem;
+  }
+  @include respond-to('desktop-xl') {
+    width: 102rem;
+  }
+}
+.row {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+.wrapper {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}

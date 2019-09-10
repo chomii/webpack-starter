@@ -1,0 +1,55 @@
+/* MEDIA QUERIES */
+@mixin respond-to($breakpoint) {
+  
+  @if $breakpoint=="mobile" {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint=="tablet" {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint=="desktop" {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint=="desktop-xl" {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @else {
+    @media ($breakpoint) {
+      @content;
+    }
+  }
+}
+
+//! Example usage
+/* @include respond-to('mobile') {} */
+
+
+/* CENTERING */
+@mixin centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//! Example usage
+/*
+.parent {
+position: relative;
+}
+.child {
+@include centered;
+}
+*/

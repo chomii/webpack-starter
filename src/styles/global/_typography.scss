@@ -1,0 +1,146 @@
+//! import google fonts
+// @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700');
+// OR use @font-face like below
+
+//! import a custom font below
+// @font-face {
+//   font-family: 'Libre-Baskerville-Reg';
+//   font-display: fallback;
+//   font-style: normal;
+//   src:
+//     local('Libre Baskerville'), /* Checks if font is on users computer */
+//     local('LibreBaskerville-Regular'), /* Checks if font is on users computer */
+//     url('fonts/libre-baskerville-v5-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+//     url('fonts/libre-baskerville-v5-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+// }
+@font-face {
+  font-family: 'Handlee-Regular';
+  font-display: fallback;
+  font-style: normal;
+  src:
+    local('Handlee Regular'), /* Checks if font is on users computer */
+    local('Handlee-Regular'), /* Checks if font is on users computer */
+    url('fonts/Handlee-Regular.ttf') format('ttf')
+}
+@font-face {
+  font-family: 'Line-Awesome';
+  font-display: fallback;
+  font-style: normal;
+  src:
+    local('Line Awesome'), /* Checks if font is on users computer */
+    local('Line-Awesome'), /* Checks if font is on users computer */
+    url('fonts/line-awesome.ttf') format('ttf')
+}
+@font-face {
+  font-family: 'Montserrat-Bold';
+  font-display: fallback;
+  font-style: normal;
+  src:
+    local('Montserrat Bold'), /* Checks if font is on users computer */
+    local('Montserrat-Bold'), /* Checks if font is on users computer */
+    url('fonts/Montserrat-Bold.ttf') format('ttf')
+}
+@font-face {
+  font-family: 'Montserrat-Bold-Italic';
+  font-display: fallback;
+  font-style: italic;
+  src:
+    local('Montserrat Bold Italic'), /* Checks if font is on users computer */
+    local('Montserrat-Bold-Italic'), /* Checks if font is on users computer */
+    url('fonts/Montserrat-BoldItalic.ttf') format('ttf')
+}
+@font-face {
+  font-family: 'Montserrat-Italic';
+  font-display: fallback;
+  font-style: italic;
+  src:
+    local('Montserrat Italic'), /* Checks if font is on users computer */
+    local('Montserrat-Italic'), /* Checks if font is on users computer */
+    url('fonts/Montserrat-Italic.ttf') format('ttf')
+}
+@font-face {
+  font-family: 'Montserrat-Medium';
+  font-display: fallback;
+  font-style: normal;
+  src:
+    local('Montserrat Medium'), /* Checks if font is on users computer */
+    local('Montserrat-Medium'), /* Checks if font is on users computer */
+    url('fonts/Montserrat-Medium.ttf') format('ttf')
+}
+@font-face {
+  font-family: 'Montserrat-Regular';
+  font-display: fallback;
+  font-style: normal;
+  src:
+    local('Montserrat Regular'), /* Checks if font is on users computer */
+    local('Montserrat-Regular'), /* Checks if font is on users computer */
+    url('fonts/Montserrat-Regular.otf') format('otf'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+@font-face {
+  font-family: 'Montserrat-Semi-Bold';
+  font-display: fallback;
+  font-style: normal;
+  src:
+    local('Montserrat Semi Bold'), /* Checks if font is on users computer */
+    local('Montserrat-Semi-Bold'), /* Checks if font is on users computer */
+    url('fonts/Montserrat-SemiBold.otf') format('otf')
+}
+@font-face {
+  font-family: 'NotoSans-Bold';
+  font-display: fallback;
+  font-style: normal;
+  src:
+    local('Noto Sans Bold'), /* Checks if font is on users computer */
+    local('Noto-Sans-Bold'), /* Checks if font is on users computer */
+    url('fonts/NotoSans-Bold.ttf') format('ttf')
+}
+@font-face {
+  font-family: 'NotoSans-Italic';
+  font-display: fallback;
+  font-style: italic;
+  src:
+    local('Noto Sans Italic'), /* Checks if font is on users computer */
+    local('Noto-Sans-Italic'), /* Checks if font is on users computer */
+    url('fonts/NotoSans-Italic.ttf') format('ttf')
+}
+@font-face {
+  font-family: 'NotoSans-Regular';
+  font-display: fallback;
+  font-style: italic;
+  src:
+    local('Noto Sans Regular'), /* Checks if font is on users computer */
+    local('Noto-Sans-Regular'), /* Checks if font is on users computer */
+    url('fonts/NotoSans-Regular.ttf') format('ttf')
+}
+
+//! set font variables
+$font-heading: 'Montserrat-Bold', Fallback, serif;
+$font-body: 'NotoSans-Regular', Fallback, sans-serif;
+
+$font-handlee-regular: 'Handlee-Regular', serif;
+$font-line-awesome: 'Line-Awesome', serif;
+$font-montserrat-bold: 'Montserrat-Bold', serif;
+$font-montserrat-bold-italic: 'Montserrat-Bold-Italic', serif;
+$font-montserrat-italic: 'Montserrat-Italic', serif;
+$font-montserrat-medium: 'Montserrat-Medium', serif;
+$font-montserrat-regular: 'Montserrat-Regular', serif;
+$font-montserrat-semi-bold: 'Montserrat-Semi-Bold', serif;
+$font-notosans-bold: 'NotoSans-Bold', serif;
+$font-notosans-italic: 'NotoSans-Italic', serif;
+$font-notosans-regular: 'NotoSans-Regular', serif;
+
+
+html {
+  font-size: 62.5%; // 1rem = 10px, 3.5rem = 35px;
+}
+
+body {
+  font-family: $font-notosans-regular;
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-family: $font-montserrat-bold, serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
