@@ -8,6 +8,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
+const imageminMozjpeg = require('imagemin-mozjpeg');
 const CompressionPlugin = require('compression-webpack-plugin');
 
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
@@ -24,7 +25,8 @@ module.exports = merge(common, {
           {
             loader: 'html-loader',
             options: {
-              minimize: true
+              minimize: true,
+              attrs: ['img:src', 'img:data-src', 'link:href']
             }
           }
         ]
@@ -87,14 +89,20 @@ module.exports = merge(common, {
       pngquant: {
         // lossy png compressor, remove for default lossless
         quality: '75'
-      }
+      },
+      plugins: [
+        imageminMozjpeg({
+          // lossy jpg compressor, remove for default lossless
+          quality: '75'
+        })
+      ]
     }),
     new FaviconsWebpackPlugin({
       logo: './src/images/logo.png',
-      // icons: {
-      //   twitter: true,
-      //   windows: true
-      // }
+      icons: {
+        twitter: true,
+        windows: true
+      }
     }),
     new ModernizrWebpackPlugin({
       'feature-detects': [

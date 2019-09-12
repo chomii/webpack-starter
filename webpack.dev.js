@@ -12,7 +12,10 @@ module.exports = merge(common, {
         test: /\.html$/,
         use: [
           {
-            loader: 'html-loader'
+            loader: 'html-loader',
+            options: {
+              attrs: ['img:src', 'img:data-src', 'link:href']
+            }
           }
         ]
       },
